@@ -232,8 +232,21 @@ export const about = {
 	heading: 'Koundinya Nemana',
 	paragraphs: [
 		'Since 2018, Koundinya Nemana has corrected the Vastu and the energies of more than 330 places. Residences, businesses, factories, commercial spaces and land, across India and abroad.',
-		'His work sits where two things meet. One is the spatial logic of traditional Vastu. The other is how we actually live now, with concealed plumbing, constant connectivity, and homes that double as workplaces. Attend to one and ignore the other, and the job is only half done.',
+		'He arrived here from an unusual direction. The curiosity began in 2000, during two decades spent in quality and process improvement. Advanced training in energy work followed. In 2018 it became the whole job.',
+		'That earlier career matters more than it might appear. Six Sigma teaches one discipline above every other: do not act on a hunch. Measure first. Find the root cause. Correct it, then check that it moved. It is the same habit he brings to a house, and it is why an assessment here begins with an instrument rather than an opinion.',
+		'His work sits where two things meet. One is the spatial logic of traditional Vastu. The other is how we actually live, with concealed plumbing, constant connectivity, and homes that double as workplaces. Attend to one and ignore the other, and the job is only half done.',
 		'Clients describe improvements in wellbeing, in relationships, in professional growth. Some have seen matters resolve that had stayed stuck for years. What is promised to you directly is narrower than that, and more concrete. An honest assessment. A clear explanation of what it finds. The exact cost, before you decide anything.'
+	],
+	// Sits under the portrait. Scannable proof, kept out of the prose so the
+	// paragraphs stay readable and the company names do not clutter them.
+	credentials: [
+		{ label: 'Practising since', value: '2018' },
+		{ label: 'Earlier career', value: 'Six Sigma Deployment Leader, MindTree' },
+		{
+			label: 'Trains Lean Six Sigma at',
+			value: 'Microsoft, IBM, Accenture, Infosys, GE, TCS, Siemens'
+		},
+		{ label: 'Education', value: 'MCA, Andhra University' }
 	],
 	cta: 'Talk to Koundinya'
 };

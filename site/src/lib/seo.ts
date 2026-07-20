@@ -77,6 +77,19 @@ export function buildJsonLd() {
 			// Ties the page to a real, established identity. This is the single
 			// strongest signal available for entity disambiguation.
 			sameAs: [business.linkedin],
+			alumniOf: {
+				'@type': 'CollegeOrUniversity',
+				name: 'Andhra University'
+			},
+			// The Six Sigma background is what makes the measurement-led approach
+			// credible, so it belongs in the entity description too.
+			knowsAbout: [
+				'Vastu Shastra',
+				'Energy correction',
+				'Lecher antenna measurement',
+				'Lean Six Sigma',
+				'Root cause analysis'
+			],
 			worksFor: { '@id': `${site.url}/#business` },
 			address: {
 				'@type': 'PostalAddress',

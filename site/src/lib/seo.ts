@@ -81,15 +81,11 @@ export function buildJsonLd() {
 				'@type': 'CollegeOrUniversity',
 				name: 'Andhra University'
 			},
-			// The Six Sigma background is what makes the measurement-led approach
-			// credible, so it belongs in the entity description too.
-			knowsAbout: [
-				'Vastu Shastra',
-				'Energy correction',
-				'Lecher antenna measurement',
-				'Lean Six Sigma',
-				'Root cause analysis'
-			],
+			// Deliberately excludes Six Sigma. Listing it here risks Google
+			// categorising him as a process-improvement trainer rather than a
+			// Vastu practitioner, which is the opposite of what this site needs
+			// to rank for. The LinkedIn sameAs already carries that history.
+			knowsAbout: ['Vastu Shastra', 'Energy correction', 'Lecher antenna measurement'],
 			worksFor: { '@id': `${site.url}/#business` },
 			address: {
 				'@type': 'PostalAddress',

@@ -14,15 +14,6 @@
 				<img src="{base}/koundinya.webp" alt="Koundinya Nemana" width="450" height="445" />
 			</div>
 			<p class="caption">{business.baseCity}</p>
-
-			<dl class="creds">
-				{#each about.credentials as cred (cred.label)}
-					<div>
-						<dt>{cred.label}</dt>
-						<dd>{cred.value}</dd>
-					</div>
-				{/each}
-			</dl>
 		</div>
 
 		<div class="copy" use:reveal={100}>
@@ -97,27 +88,6 @@
 		color: var(--ink-faint);
 	}
 
-	.creds {
-		margin: 1.75rem 0 0;
-		padding-top: 1.5rem;
-		border-top: 1px solid rgba(61, 54, 48, 0.14);
-		display: grid;
-		gap: 1.1rem;
-	}
-
-	.creds dt {
-		font-size: 0.68rem;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: var(--ink-faint);
-	}
-
-	.creds dd {
-		margin: 0.3rem 0 0;
-		font-size: 0.88rem;
-		line-height: 1.5;
-		color: var(--ink);
-	}
 
 	.para {
 		margin-top: 1.4rem;

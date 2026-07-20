@@ -64,7 +64,7 @@ export const hero = {
 	stats: [
 		{ value: '330+', label: 'Places corrected' },
 		{ value: 'Zero', label: 'Walls broken' },
-		{ value: '2018', label: 'Practising since' },
+		{ value: '2018', label: 'Full-time since' },
 		{ value: 'India + abroad', label: 'Clients served' }
 	]
 };
@@ -230,23 +230,15 @@ export const faq = {
 export const about = {
 	eyebrow: 'About',
 	heading: 'Koundinya Nemana',
+	// Kept deliberately short and plain. He is a reserved person who would not
+	// present himself by listing past achievements, so the background gets one
+	// quiet sentence that explains the method, and no company names. Anyone who
+	// wants the full history can follow the LinkedIn link in the footer.
 	paragraphs: [
-		'Since 2018, Koundinya Nemana has corrected the Vastu and the energies of more than 330 places. Residences, businesses, factories, commercial spaces and land, across India and abroad.',
-		'He arrived here from an unusual direction. The curiosity began in 2000, during two decades spent in quality and process improvement. Advanced training in energy work followed. In 2018 it became the whole job.',
-		'That earlier career matters more than it might appear. Six Sigma teaches one discipline above every other: do not act on a hunch. Measure first. Find the root cause. Correct it, then check that it moved. It is the same habit he brings to a house, and it is why an assessment here begins with an instrument rather than an opinion.',
-		'His work sits where two things meet. One is the spatial logic of traditional Vastu. The other is how we actually live, with concealed plumbing, constant connectivity, and homes that double as workplaces. Attend to one and ignore the other, and the job is only half done.',
-		'Clients describe improvements in wellbeing, in relationships, in professional growth. Some have seen matters resolve that had stayed stuck for years. What is promised to you directly is narrower than that, and more concrete. An honest assessment. A clear explanation of what it finds. The exact cost, before you decide anything.'
-	],
-	// Sits under the portrait. Scannable proof, kept out of the prose so the
-	// paragraphs stay readable and the company names do not clutter them.
-	credentials: [
-		{ label: 'Practising since', value: '2018' },
-		{ label: 'Earlier career', value: 'Six Sigma Deployment Leader, MindTree' },
-		{
-			label: 'Trains Lean Six Sigma at',
-			value: 'Microsoft, IBM, Accenture, Infosys, GE, TCS, Siemens'
-		},
-		{ label: 'Education', value: 'MCA, Andhra University' }
+		'Since 2018, correcting the Vastu and the energy of a place has been Koundinya Nemana’s full-time work. More than 330 of them so far. Homes, businesses, factories, commercial spaces and land, in India and abroad.',
+		'The work sits where two things meet. The spatial logic of traditional Vastu, and the way we actually live now, with concealed plumbing, constant connectivity, and homes that double as workplaces. Attend to one and ignore the other, and the job is only half done.',
+		'He came to it after two decades in Six Sigma and quality improvement. That work teaches one habit above all others: measure before you conclude, and correct the cause rather than the symptom. He approaches a place the same way.',
+		'What he promises is narrow and concrete. An honest assessment. A clear explanation of what it finds. The exact cost, before you decide anything.'
 	],
 	cta: 'Talk to Koundinya'
 };

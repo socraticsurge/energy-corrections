@@ -67,6 +67,13 @@
 		display: none;
 	}
 
+	/* Balance the question across its lines so a two-line question never ends
+	   on a stranded word. Applied to the span, not the summary, because the
+	   summary is a flex row containing the plus sign. */
+	summary > span:first-child {
+		text-wrap: balance;
+	}
+
 	summary:hover {
 		color: var(--terracotta);
 	}

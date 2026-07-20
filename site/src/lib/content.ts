@@ -21,8 +21,12 @@
 // Business details
 // ---------------------------------------------------------------------------
 
+/**
+ * Injected at build time by vite.config.ts, derived from static/CNAME.
+ * To move the site to a custom domain, create that file. Nothing here changes.
+ */
 export const site = {
-	url: 'https://socraticsurge.github.io/energy-corrections'
+	url: __SITE_URL__
 };
 
 export const business = {
@@ -196,7 +200,7 @@ export const faq = {
 	heading: 'The questions that come up most.',
 	items: [
 		{
-			q: 'My home is already Vastu compliant. Is there anything left to do?',
+			q: 'My home is already Vastu compliant. Is anything left to do?',
 			a: 'Usually there is. Vastu compliance covers layout and direction. It does not cover concealed drainage or electromagnetic fields. Neither existed when the texts were written, so neither is addressed in them.'
 		},
 		{

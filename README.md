@@ -107,7 +107,30 @@ and publishes it to GitHub Pages. Nothing to do by hand.
 
 ### Moving to a custom domain
 
-1. Add the domain under *Settings → Pages → Custom domain*.
-2. Add a file `site/static/CNAME` containing just the domain name.
-3. In `.github/workflows/deploy.yml`, change `BASE_PATH` to an empty string —
-   a custom domain serves from the root, so the `/repo-name` prefix must go.
+Everything is derived from **one file**. Create `site/static/CNAME` containing
+just the bare domain:
+
+```
+energycorrections.com
+```
+
+Commit and push. The build reads that file and automatically switches the asset
+prefix to the root, and points the canonical URL, Open Graph tags, sitemap and
+robots.txt at the new domain. Nothing else in the repo needs editing.
+
+Then point DNS at GitHub. For an apex domain (`example.com`), four A records:
+
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+Plus a CNAME record for `www` pointing at `socraticsurge.github.io`.
+
+Finally, in *Settings → Pages → Custom domain*, enter the domain and tick
+**Enforce HTTPS** once the certificate has been issued. That can take up to
+24 hours; the box stays greyed out until it is ready.
+
+To move back to the github.io URL, delete `site/static/CNAME`.

@@ -81,11 +81,12 @@
 		font-size: 1.05rem;
 		font-weight: 600;
 		margin-right: auto;
+		white-space: nowrap;
 	}
 
 	.links {
 		display: flex;
-		gap: 2rem;
+		gap: clamp(1.1rem, 2.2vw, 2rem);
 	}
 
 	.links a {
@@ -93,6 +94,7 @@
 		color: var(--ink-soft);
 		text-decoration: none;
 		transition: color 0.2s ease;
+		white-space: nowrap;
 	}
 
 	.links a:hover {
@@ -102,6 +104,7 @@
 	.cta {
 		padding: 0.75rem 1.35rem;
 		font-size: 0.85rem;
+		white-space: nowrap;
 	}
 
 	.toggle {
@@ -177,7 +180,9 @@
 		padding: 0.9rem 1rem !important;
 	}
 
-	@media (max-width: 860px) {
+	/* Five nav items plus the brand and the CTA stop fitting well before the
+	   old 860px breakpoint, so the drawer takes over earlier. */
+	@media (max-width: 980px) {
 		.links,
 		.cta {
 			display: none;

@@ -19,7 +19,10 @@
 		</nav>
 
 		<div class="contact">
-			<a href={whatsappLink} target="_blank" rel="noopener">WhatsApp</a>
+			<a href={whatsappLink} target="_blank" rel="noopener">
+				WhatsApp · {business.whatsappDisplay}
+			</a>
+			<a href="tel:+{business.whatsapp}">Call {business.whatsappDisplay}</a>
 			<a href="mailto:{business.email}">{business.email}</a>
 		</div>
 	</div>

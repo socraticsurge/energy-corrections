@@ -34,11 +34,15 @@ Common edits:
 Put the photo in `site/static/testimonials/`, then add an entry to
 `testimonials.items` with `name`, `title`, `image` (just the filename) and `quote`.
 
-### Adding a photo of Koundinya
+### Replacing the photo of Koundinya
 
-Drop the file at `site/static/koundinya.jpg`, then in
-`site/src/lib/components/About.svelte` replace the `.placeholder` block with the
-commented-out `<img>` line just above it.
+The About portrait is `site/static/koundinya.webp` — a **transparent cutout**, so
+it sits directly on the background with a soft sage disc behind it. If you swap it,
+keep the transparency; a photo with a solid backdrop will look boxed-in and wrong.
+
+The current file was cut out from a black-backdrop studio shot using
+`scripts/cutout.py`. Point that script at a new source image and re-run it if you
+need to repeat the process.
 
 ## Brand
 

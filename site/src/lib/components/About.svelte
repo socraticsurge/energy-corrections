@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { about, business, whatsappLink } from '$lib/content';
 	import { reveal } from '$lib/actions/reveal';
 </script>
@@ -6,10 +7,11 @@
 <section class="section about" id="about">
 	<div class="shell inner">
 		<div class="portrait" use:reveal>
-			<!-- Replace this block with <img src="{base}/koundinya.jpg" alt="Koundinya Nemana" />
-			     once a photograph is available. -->
-			<div class="placeholder" aria-hidden="true">
-				<span>KN</span>
+			<!-- The photograph is a transparent cutout, so it sits directly on the
+			     section background with a soft disc behind it rather than in a box. -->
+			<div class="frame">
+				<span class="disc" aria-hidden="true"></span>
+				<img src="{base}/koundinya.webp" alt="Koundinya Nemana" width="450" height="445" />
 			</div>
 			<p class="caption">{business.baseCity}</p>
 		</div>
@@ -47,19 +49,35 @@
 		top: 7rem;
 	}
 
-	.placeholder {
-		aspect-ratio: 4 / 5;
-		border-radius: 16px;
-		background: linear-gradient(160deg, var(--sage), var(--forest));
+	.frame {
+		position: relative;
 		display: grid;
-		place-items: center;
+		place-items: end center;
 	}
 
-	.placeholder span {
-		font-family: var(--serif);
-		font-size: 3rem;
-		color: rgba(255, 255, 255, 0.85);
-		letter-spacing: 0.05em;
+	/* A soft sage disc, sized to sit behind the head and shoulders. */
+	.disc {
+		grid-area: 1 / 1;
+		align-self: center;
+		width: 92%;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background: radial-gradient(
+			circle at 50% 45%,
+			rgba(138, 154, 123, 0.42),
+			rgba(138, 154, 123, 0.16) 68%,
+			rgba(138, 154, 123, 0) 72%
+		);
+	}
+
+	.frame img {
+		grid-area: 1 / 1;
+		position: relative;
+		width: 100%;
+		height: auto;
+		/* The cutout ends in a hard horizontal line at the jacket; dissolve the
+		   last few percent so it settles into the background instead. */
+		mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
 	}
 
 	.caption {

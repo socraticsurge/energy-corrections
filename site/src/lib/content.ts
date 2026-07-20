@@ -13,12 +13,13 @@ export const business = {
 	name: 'Koundinya Nemana',
 	practice: 'Energy Corrections',
 	tagline: 'Your place. Your peace.',
-	// TODO: replace with the real number, digits only, including country code.
-	whatsapp: '919999999999',
+	// Digits only, including country code — this is what wa.me expects.
+	whatsapp: '919886693868',
+	whatsappDisplay: '+91 98866 93868',
 	whatsappMessage:
 		"Hello Koundinya, I'd like to book an assessment for my place.",
-	email: 'hello@example.com',
-	baseCity: 'Bengaluru, India',
+	email: 'contact.koundinya@gmail.com',
+	baseCity: 'Hyderabad, India',
 	servingNote: 'Serving clients across India and abroad',
 	since: 2018
 };

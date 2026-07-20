@@ -39,6 +39,7 @@ export const business = {
 	whatsappMessage:
 		"Hello Koundinya, I'd like to book an assessment for my place.",
 	email: 'contact.koundinya@gmail.com',
+	linkedin: 'https://www.linkedin.com/in/koundinyanemana/',
 	baseCity: 'Hyderabad, India',
 	servingNote: 'Serving clients across India and abroad',
 	since: 2018,

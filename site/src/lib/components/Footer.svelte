@@ -24,6 +24,7 @@
 			</a>
 			<a href="tel:+{business.whatsapp}">Call {business.whatsappDisplay}</a>
 			<a href="mailto:{business.email}">{business.email}</a>
+			<a href={business.linkedin} target="_blank" rel="noopener">LinkedIn</a>
 		</div>
 	</div>
 

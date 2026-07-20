@@ -26,6 +26,7 @@ export function buildJsonLd() {
 			url: site.url,
 			telephone: `+${business.whatsapp}`,
 			email: business.email,
+			sameAs: [business.linkedin],
 			founder: { '@id': `${site.url}/#person` },
 			foundingDate: String(business.since),
 			priceRange: '$$',
@@ -73,6 +74,9 @@ export function buildJsonLd() {
 			jobTitle: 'Vastu and energy correction consultant',
 			description: about.paragraphs[0],
 			image: `${site.url}/koundinya.webp`,
+			// Ties the page to a real, established identity. This is the single
+			// strongest signal available for entity disambiguation.
+			sameAs: [business.linkedin],
 			worksFor: { '@id': `${site.url}/#business` },
 			address: {
 				'@type': 'PostalAddress',

@@ -63,15 +63,38 @@ if PORTRAIT.exists():
     mask = Image.fromarray((__import__("numpy").asarray(mask) * (__import__("numpy").asarray(fade) / 255)).astype("uint8"))
     img.paste(p, (W - p.width - 60, H - p.height), mask)
 
-# Terracotta rule, top left.
-d.rectangle([80, 92, 80 + 54, 92 + 4], fill=TERRACOTTA)
+def mandala(draw, cx, cy, size):
+    """The brand mark: fixed outer square, inner square turned within it."""
+    import math
 
-d.text((80, 132), "YOUR PLACE.  YOUR PEACE.", font=sans_b(19), fill=TERRACOTTA)
+    s = size / 64
+    half_outer = 22 * s
+    draw.rounded_rectangle(
+        [cx - half_outer, cy - half_outer, cx + half_outer, cy + half_outer],
+        radius=6.5 * s,
+        outline=SAGE,
+        width=max(2, int(3.6 * s)),
+    )
+    half = 24.8 * s / 2
+    a = math.radians(24)
+    pts = [
+        (
+            cx + dx * math.cos(a) - dy * math.sin(a),
+            cy + dx * math.sin(a) + dy * math.cos(a),
+        )
+        for dx, dy in ((-half, -half), (half, -half), (half, half), (-half, half))
+    ]
+    draw.polygon(pts, fill=TERRACOTTA)
 
-d.text((80, 190), "Balance your", font=serif(66), fill=FOREST)
-d.text((80, 262), "home’s energy.", font=serif(66), fill=FOREST)
-d.text((80, 344), "Without breaking", font=serif_i(58), fill=TERRACOTTA)
-d.text((80, 408), "a single wall.", font=serif_i(58), fill=TERRACOTTA)
+
+mandala(d, 80 + 23, 88 + 23, 46)
+
+d.text((80, 152), "YOUR PLACE.  YOUR PEACE.", font=sans_b(19), fill=TERRACOTTA)
+
+d.text((80, 200), "Balance your", font=serif(64), fill=FOREST)
+d.text((80, 270), "home’s energy.", font=serif(64), fill=FOREST)
+d.text((80, 348), "Without breaking", font=serif_i(56), fill=TERRACOTTA)
+d.text((80, 410), "a single wall.", font=serif_i(56), fill=TERRACOTTA)
 
 d.line([80, 500, 560, 500], fill=(0, 0, 0, 30), width=1)
 

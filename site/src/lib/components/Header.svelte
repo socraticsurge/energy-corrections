@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Logo from './Logo.svelte';
 	import { business, nav, whatsappLink } from '$lib/content';
 
 	let scrolled = $state(false);
@@ -10,7 +11,7 @@
 <header class="header" class:scrolled>
 	<div class="shell bar">
 		<a class="brand" href="#top">
-			<span class="mark" aria-hidden="true"></span>
+			<Logo size={22} />
 			<span class="brand-text">{business.name}</span>
 		</a>
 
@@ -80,24 +81,6 @@
 		font-size: 1.05rem;
 		font-weight: 600;
 		margin-right: auto;
-	}
-
-	/* A sun/compass glyph — grounded, not mystical. */
-	.mark {
-		width: 1.1rem;
-		height: 1.1rem;
-		border-radius: 50%;
-		border: 1.5px solid var(--terracotta);
-		position: relative;
-		flex: none;
-	}
-
-	.mark::after {
-		content: '';
-		position: absolute;
-		inset: 3px;
-		border-radius: 50%;
-		background: var(--terracotta);
 	}
 
 	.links {

@@ -7,7 +7,12 @@
 	<div class="shell">
 		<div class="head" use:reveal>
 			<p class="eyebrow">{method.eyebrow}</p>
-			<h2 class="section-heading">{method.heading}</h2>
+			<h2 class="section-heading stack">
+				{#each method.headingLines as line, i (line)}
+					<!-- The third phrase is the promise, so it carries the accent. -->
+					<span class="line" class:accent={i === method.headingLines.length - 1}>{line}</span>
+				{/each}
+			</h2>
 			<p class="lede">{method.body}</p>
 		</div>
 
@@ -26,6 +31,31 @@
 <style>
 	.head {
 		max-width: 44rem;
+	}
+
+	/* Each phrase gets its own line. Letting the browser wrap the three
+	   sentences as one paragraph split them mid-phrase, which broke the
+	   three-beat rhythm the line is built on. */
+	.stack {
+		max-width: none;
+	}
+
+	.line {
+		display: block;
+	}
+
+	.line.accent {
+		color: var(--sand);
+		font-style: italic;
+		font-weight: 400;
+	}
+
+	/* Below this width the three lines start to feel like a list, so they
+	   tighten up to compensate. */
+	@media (max-width: 620px) {
+		.stack {
+			line-height: 1.08;
+		}
 	}
 
 	.steps {

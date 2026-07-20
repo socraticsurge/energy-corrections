@@ -2,14 +2,19 @@
  * Every piece of copy and configuration for the site lives here.
  *
  * To change the site's wording, phone number, or testimonials, edit this file
- * only — nothing in `components/` needs to be touched.
+ * only. Nothing in `components/` needs to be touched.
  *
  * COPY RULES for anyone editing this file:
  *   1. No em dashes. Use a full stop, a comma, or a colon instead.
  *   2. Short sentences. If one runs past about 18 words, split it.
  *   3. One idea per sentence. Readers scan; they do not parse.
- *   4. Avoid trailing a heading with a single short word on its own line.
- *      Where a heading is at risk, bind the last two words with  .
+ *   4. VOICE: the site speaks *for* Koundinya, not *as* him. He is reserved and
+ *      does not talk about himself in "I" terms, so the page introduces him in
+ *      the third person and addresses the reader as "you". Write "the assessment
+ *      begins with readings", not "I begin by taking readings". The only first
+ *      person on the page belongs to clients, inside their own quotes.
+ *   5. Avoid stranding a single short word on its own line at the end of a
+ *      heading. Where a heading is at risk, bind the last two words with  .
  */
 
 // ---------------------------------------------------------------------------
@@ -24,7 +29,7 @@ export const business = {
 	name: 'Koundinya Nemana',
 	practice: 'Energy Corrections',
 	tagline: 'Your place. Your peace.',
-	// Digits only, including country code — this is what wa.me expects.
+	// Digits only, including country code. This is what wa.me expects.
 	whatsapp: '919886693868',
 	whatsappDisplay: '+91 98866 93868',
 	whatsappMessage:
@@ -48,8 +53,8 @@ export const hero = {
 	eyebrow: 'Your place. Your peace.',
 	headline: 'Balance your home’s energy.',
 	// Bound with a non-breaking space so "wall." never drops to its own line.
-	headlineAccent: 'Without breaking a single wall.',
-	body: 'You followed Vastu carefully. So why does the place still feel stuck? Modern homes leak energy in ways the old texts never described. I measure those leaks and correct them. No demolition. No renovation.',
+	headlineAccent: 'Without breaking a single wall.',
+	body: 'You followed Vastu carefully. So why does the place still feel stuck? Modern homes leak energy in ways the old texts never described. Those leaks can be measured, and corrected. No demolition. No renovation.',
 	cta: 'Book an assessment',
 	stats: [
 		{ value: '330+', label: 'Places corrected' },
@@ -65,7 +70,7 @@ export const hero = {
 
 export const problem = {
 	eyebrow: 'The hidden problem',
-	heading: 'The limits of ancient texts in a modern world.',
+	heading: 'The limits of ancient texts in a modern world.',
 	body: 'Your kitchen may sit exactly where Vastu asks. Your toilets too. The place can still carry imbalances that affect health, money, sleep and relationships. And you now spend far more hours inside it than any generation before you did.',
 	factors: [
 		{
@@ -89,23 +94,25 @@ export const problem = {
 
 export const method = {
 	eyebrow: 'The approach',
-	heading: 'Measured first. Corrected second. Never demolished.',
-	body: 'I do not guess at what is wrong with a place. I take readings, and I work from what they show me.',
+	// Three phrases, three lines. Rendered as separate blocks so the rhythm
+	// survives every screen width instead of breaking mid-phrase.
+	headingLines: ['Measured first.', 'Corrected second.', 'Never demolished.'],
+	body: 'Nothing here is guessed at. Every correction follows from a reading taken in your space.',
 	steps: [
 		{
 			number: '01',
-			title: 'I measure with a Lecher antenna',
-			body: 'A Lecher antenna is a calibrated instrument for taking energy readings at specific points in a space. I use it to map what is out of balance in yours. Some imbalances are physical. Some are not. Both get recorded.'
+			title: 'Measured with a Lecher antenna',
+			body: 'A Lecher antenna is a calibrated instrument for taking energy readings at specific points in a space. It maps what is out of balance in yours. Some imbalances are physical. Some are not. Both get recorded.'
 		},
 		{
 			number: '02',
-			title: 'I explain, then I quote',
-			body: 'I walk you through every imbalance I found and why it is there. Then you get the exact cost to correct it. You decide after that, not before.'
+			title: 'Explained, then quoted',
+			body: 'Every imbalance found gets explained to you, along with why it is there. The exact cost of correcting it follows. You decide after that, not before.'
 		},
 		{
 			number: '03',
-			title: 'I correct without touching the structure',
-			body: 'No wall comes down. Nothing gets remodelled. Because there is no construction involved, it costs a fraction of conventional Vastu correction.'
+			title: 'Corrected without touching the structure',
+			body: 'No wall comes down. Nothing gets remodelled. Because no construction is involved, it costs a fraction of conventional Vastu correction.'
 		}
 	]
 };
@@ -115,16 +122,16 @@ export const method = {
 // ---------------------------------------------------------------------------
 
 export const audiences = {
-	eyebrow: 'Who I work with',
-	heading: 'Homes, businesses, and the land they sit on.',
+	eyebrow: 'Who this is for',
+	heading: 'Homes, businesses, and the land they sit on.',
 	items: [
 		{
 			title: 'Homes in India',
-			body: 'Apartments, independent houses and plots. Most people call me about health, relationships, or a feeling that nothing is moving. They want it addressed without tearing up the house.'
+			body: 'Apartments, independent houses and plots. Most enquiries start with health, relationships, or a feeling that nothing is moving. And a wish to address it without tearing up the house.'
 		},
 		{
 			title: 'Homes overseas',
-			body: 'I assess and correct places I have never stood in. Clients in the USA and elsewhere have had their homes corrected remotely, from details they sent me. Distance is not an obstacle.'
+			body: 'Distance is not an obstacle. Homes in the USA and elsewhere have been assessed and corrected remotely, worked out from details their owners sent across.'
 		},
 		{
 			title: 'Businesses and factories',
@@ -134,8 +141,8 @@ export const audiences = {
 };
 
 // ---------------------------------------------------------------------------
-// Testimonials — quotes are reproduced as given, with permission.
-// Client wording is left untouched, including its long sentences.
+// Testimonials. Quotes are reproduced as given, with permission.
+// Client wording is left untouched, including its long sentences and its "I".
 // ---------------------------------------------------------------------------
 
 export const testimonials = {
@@ -181,31 +188,31 @@ export const testimonials = {
 };
 
 // ---------------------------------------------------------------------------
-// Questions — also emitted as FAQPage structured data for search results.
+// Questions. Also emitted as FAQPage structured data for search results.
 // ---------------------------------------------------------------------------
 
 export const faq = {
 	eyebrow: 'Before you ask',
-	heading: 'The questions I get most.',
+	heading: 'The questions that come up most.',
 	items: [
 		{
 			q: 'My home is already Vastu compliant. Is there anything left to do?',
-			a: 'Usually, yes. Vastu compliance covers layout and direction. It does not cover concealed drainage or electromagnetic fields. Neither existed when the texts were written, so neither is addressed in them.'
+			a: 'Usually there is. Vastu compliance covers layout and direction. It does not cover concealed drainage or electromagnetic fields. Neither existed when the texts were written, so neither is addressed in them.'
 		},
 		{
-			q: 'Do you have to visit my home?',
-			a: 'Not necessarily. I have corrected homes in the USA and elsewhere without travelling to them, working from details the owner sends me. On-site visits are available too. Both routes work.'
+			q: 'Does Koundinya need to visit the property?',
+			a: 'Not necessarily. Homes in the USA and elsewhere have been corrected remotely, worked out from details the owner sends across. On-site visits are available too. Both routes work.'
 		},
 		{
 			q: 'Will anything be broken or rebuilt?',
-			a: 'No. Not a wall, not a floor, not a fitting. Every correction is non-structural. That is the whole basis of how I work.'
+			a: 'No. Not a wall, not a floor, not a fitting. Every correction is non-structural. That is the whole basis of the practice.'
 		},
 		{
 			q: 'What does it cost?',
-			a: 'You get the exact figure after the assessment and before any correction starts. Because no construction is involved, it costs far less than traditional Vastu remodelling.'
+			a: 'The exact figure comes after the assessment, and before any correction starts. Because no construction is involved, it costs far less than traditional Vastu remodelling.'
 		},
 		{
-			q: 'Do you work with businesses as well as homes?',
+			q: 'Are businesses covered as well as homes?',
 			a: 'Yes. Offices, shops, factories, commercial buildings and land, alongside residences.'
 		}
 	]
@@ -219,11 +226,11 @@ export const about = {
 	eyebrow: 'About',
 	heading: 'Koundinya Nemana',
 	paragraphs: [
-		'Since 2018 I have corrected the Vastu and the energies of more than 330 places. Residences, businesses, factories, commercial spaces and land, in India and abroad.',
-		'My work sits where two things meet. One is the spatial logic of traditional Vastu. The other is how we actually live now, with concealed plumbing, constant connectivity, and homes that double as workplaces. Attend to one and ignore the other, and the job is half done.',
-		'Clients have told me about improvements in wellbeing, in relationships, in professional growth. Some have resolved matters that stayed stuck for years. What I promise you directly is narrower than that, and more concrete. An honest assessment. A clear explanation of what I find. The exact cost, before you decide anything.'
+		'Since 2018, Koundinya Nemana has corrected the Vastu and the energies of more than 330 places. Residences, businesses, factories, commercial spaces and land, across India and abroad.',
+		'His work sits where two things meet. One is the spatial logic of traditional Vastu. The other is how we actually live now, with concealed plumbing, constant connectivity, and homes that double as workplaces. Attend to one and ignore the other, and the job is only half done.',
+		'Clients describe improvements in wellbeing, in relationships, in professional growth. Some have seen matters resolve that had stayed stuck for years. What is promised to you directly is narrower than that, and more concrete. An honest assessment. A clear explanation of what it finds. The exact cost, before you decide anything.'
 	],
-	cta: 'Let’s discuss your space'
+	cta: 'Talk to Koundinya'
 };
 
 // ---------------------------------------------------------------------------
@@ -231,8 +238,8 @@ export const about = {
 // ---------------------------------------------------------------------------
 
 export const closing = {
-	heading: 'Find out what your place is losing.',
-	body: 'Book an assessment. I will measure your space, show you what is out of balance, and explain why. Then I will tell you what correcting it costs, before you commit to anything.',
+	heading: 'Find out what your place is losing.',
+	body: 'Book an assessment. Your space gets measured, the imbalances get explained, and the cost of correcting them is confirmed. All of it before you commit to anything.',
 	cta: 'Book an assessment',
 	reassurance: 'No demolition · No renovation · Cost confirmed before you commit'
 };

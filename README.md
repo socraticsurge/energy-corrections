@@ -46,6 +46,36 @@ need to repeat the process.
 
 ## Brand
 
+### The mark
+
+The Vastu Purusha Mandala is a square grid. The logo takes that square, fixes it,
+and turns a second square inside it: **the structure never moves, the energy
+within it does.** That is the no-demolition promise, drawn.
+
+It lives in three places, and all three must be changed together if it is ever
+redrawn:
+
+- `site/src/lib/components/Logo.svelte` — the on-page mark (turns further on hover)
+- `site/static/favicon.svg` — browser tab
+- `site/static/apple-touch-icon.png` — iOS home screen, regenerated from the shape
+
+### Voice
+
+The site speaks **for** Koundinya, not **as** him. He is reserved and does not
+talk about himself in "I" terms, so the page introduces him in the third person
+and addresses the reader as "you".
+
+Write "the assessment begins with readings", not "I begin by taking readings".
+The only first person on the page belongs to clients, inside their own quotes.
+
+### Copy rules
+
+No em dashes. Short sentences. One idea per sentence. Do not strand a single
+short word on its own line at the end of a heading. The full list is at the top
+of `content.ts`.
+
+### Colour and type
+
 Defined as CSS variables at the top of `site/src/lib/styles/app.css`.
 
 - **Deep Forest** `#2C3A2E` — anchor, dark sections

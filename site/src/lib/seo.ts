@@ -52,14 +52,32 @@ export function buildJsonLd() {
 				'@type': 'OfferCatalog',
 				name: 'Services',
 				itemListElement: [
-					'Residential Vastu and energy assessment',
-					'Commercial and factory energy correction',
-					'Remote assessment for overseas properties',
-					'Land and plot assessment'
-				].map((n) => ({
-					'@type': 'Offer',
-					itemOffered: { '@type': 'Service', name: n }
-				}))
+					{
+						'@type': 'Offer',
+						itemOffered: {
+							'@type': 'Service',
+							name: 'Residential Vastu and energy assessment'
+						},
+						// Only the assessment carries a published price. Correction is
+						// quoted per property, so no figure is claimed for it here.
+						priceSpecification: {
+							'@type': 'PriceSpecification',
+							price: 1500,
+							priceCurrency: 'INR',
+							valueAddedTaxIncluded: true,
+							description: 'Starting price; varies with property size and type'
+						}
+					},
+					...[
+						'Commercial and factory energy correction',
+						'Remote assessment for overseas properties',
+						'Follow-up guidance after implementation',
+						'Land and plot assessment'
+					].map((n) => ({
+						'@type': 'Offer',
+						itemOffered: { '@type': 'Service', name: n }
+					}))
+				]
 			},
 			review: testimonials.items.map((t) => ({
 				'@type': 'Review',

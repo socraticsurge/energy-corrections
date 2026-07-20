@@ -132,11 +132,11 @@ export const audiences = {
 	items: [
 		{
 			title: 'Homes in India',
-			body: 'Apartments, independent houses and plots. Most enquiries start with health, relationships, or a feeling that nothing is moving. And a wish to address it without tearing up the house.'
+			body: 'Apartments, independent houses and plots, in Hyderabad, Bengaluru, Visakhapatnam and elsewhere. Most enquiries start with health, relationships, or a feeling that nothing is moving. And a wish to address it without tearing up the house.'
 		},
 		{
 			title: 'Homes overseas',
-			body: 'Distance is not an obstacle. Homes in the USA and elsewhere have been assessed and corrected remotely, worked out from details their owners sent across.'
+			body: 'Distance is not an obstacle. Homes in the USA, the UK, Australia, Italy and Dubai have been assessed and corrected remotely, worked out from details their owners sent across.'
 		},
 		{
 			title: 'Businesses and factories',
@@ -206,7 +206,11 @@ export const faq = {
 		},
 		{
 			q: 'Does Koundinya need to visit the property?',
-			a: 'Not necessarily. Homes in the USA and elsewhere have been corrected remotely, worked out from details the owner sends across. On-site visits are available too. Both routes work.'
+			a: 'Not necessarily. Most overseas work is done remotely, using digital communication and remote correction techniques. Homes in the USA, the UK, Australia, Italy and Dubai have been corrected this way. On-site visits are available if you prefer, with travel and accommodation charged in addition to the fee.'
+		},
+		{
+			q: 'What happens once the corrections are made?',
+			a: 'You get follow-up guidance after implementation. The work is checked, and questions that surface later still get answered. It does not end at the point of payment.'
 		},
 		{
 			q: 'Will anything be broken or rebuilt?',
@@ -214,7 +218,7 @@ export const faq = {
 		},
 		{
 			q: 'What does it cost?',
-			a: 'The exact figure comes after the assessment, and before any correction starts. Because no construction is involved, it costs far less than traditional Vastu remodelling.'
+			a: 'The assessment starts at ₹1,500, and rises with the size and type of the property. Correction is quoted separately, and you get that exact figure after the assessment and before any work begins. Because no construction is involved, it costs far less than traditional Vastu remodelling.'
 		},
 		{
 			q: 'Are businesses covered as well as homes?',
@@ -251,7 +255,7 @@ export const closing = {
 	heading: 'Find out what your place is losing.',
 	body: 'Book an assessment. Your space gets measured, the imbalances get explained, and the cost of correcting them is confirmed. All of it before you commit to anything.',
 	cta: 'Book an assessment',
-	reassurance: 'No demolition · No renovation · Cost confirmed before you commit'
+	reassurance: 'Assessments from ₹1,500 · No demolition · Cost confirmed before you commit'
 };
 
 export const nav = [

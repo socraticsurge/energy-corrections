@@ -10,8 +10,8 @@
 		<p class="tag" use:reveal={0}>{hero.eyebrow}</p>
 
 		<h1 use:reveal={80}>
-			{hero.headline}<br />
-			<em>{hero.headlineAccent}</em>
+			<span class="line">{hero.headline}</span>
+			<em class="line">{hero.headlineAccent}</em>
 		</h1>
 
 		<p class="body" use:reveal={160}>{hero.body}</p>
@@ -80,6 +80,13 @@
 		font-size: clamp(2.5rem, 7vw, 4.6rem);
 		margin-top: 2rem;
 		max-width: 16ch;
+	}
+
+	/* Each line balances its own wrapping. Balancing the whole h1 as one block
+	   is what stranded "wall." on a line by itself. */
+	.line {
+		display: block;
+		text-wrap: balance;
 	}
 
 	h1 em {

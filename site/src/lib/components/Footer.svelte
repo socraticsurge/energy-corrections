@@ -109,4 +109,11 @@
 			gap: 2.25rem;
 		}
 	}
+
+	/* Clear the fixed WhatsApp bar so it never sits on top of the fine print. */
+	@media (max-width: 860px) {
+		footer {
+			padding-bottom: 6rem;
+		}
+	}
 </style>

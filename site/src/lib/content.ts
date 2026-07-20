@@ -3,11 +3,22 @@
  *
  * To change the site's wording, phone number, or testimonials, edit this file
  * only — nothing in `components/` needs to be touched.
+ *
+ * COPY RULES for anyone editing this file:
+ *   1. No em dashes. Use a full stop, a comma, or a colon instead.
+ *   2. Short sentences. If one runs past about 18 words, split it.
+ *   3. One idea per sentence. Readers scan; they do not parse.
+ *   4. Avoid trailing a heading with a single short word on its own line.
+ *      Where a heading is at risk, bind the last two words with  .
  */
 
 // ---------------------------------------------------------------------------
 // Business details
 // ---------------------------------------------------------------------------
+
+export const site = {
+	url: 'https://socraticsurge.github.io/energy-corrections'
+};
 
 export const business = {
 	name: 'Koundinya Nemana',
@@ -21,7 +32,8 @@ export const business = {
 	email: 'contact.koundinya@gmail.com',
 	baseCity: 'Hyderabad, India',
 	servingNote: 'Serving clients across India and abroad',
-	since: 2018
+	since: 2018,
+	clientsServed: 330
 };
 
 export const whatsappLink = `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(
@@ -35,12 +47,13 @@ export const whatsappLink = `https://wa.me/${business.whatsapp}?text=${encodeURI
 export const hero = {
 	eyebrow: 'Your place. Your peace.',
 	headline: 'Balance your home’s energy.',
-	headlineAccent: 'Without breaking a single wall.',
-	body: "Have you aligned your space perfectly to Vastu — and still feel stuck? Modern homes leak energy in ways the ancient texts never had to account for. I find those leaks and correct them, with no demolition and no renovation.",
+	// Bound with a non-breaking space so "wall." never drops to its own line.
+	headlineAccent: 'Without breaking a single wall.',
+	body: 'You followed Vastu carefully. So why does the place still feel stuck? Modern homes leak energy in ways the old texts never described. I measure those leaks and correct them. No demolition. No renovation.',
 	cta: 'Book an assessment',
 	stats: [
-		{ value: '100%', label: 'Non-structural' },
-		{ value: 'Zero', label: 'Demolition' },
+		{ value: '330+', label: 'Places corrected' },
+		{ value: 'Zero', label: 'Walls broken' },
 		{ value: '2018', label: 'Practising since' },
 		{ value: 'India + abroad', label: 'Clients served' }
 	]
@@ -52,22 +65,22 @@ export const hero = {
 
 export const problem = {
 	eyebrow: 'The hidden problem',
-	heading: 'The limits of ancient texts in a modern world.',
-	body: "Even if your kitchen and toilets sit exactly where Vastu asks, your place can still carry multiple energy imbalances — ones that quietly affect health, emotions, finances, relationships and growth. In today’s work-from-home culture, you are exposed to them for far more hours than any previous generation.",
+	heading: 'The limits of ancient texts in a modern world.',
+	body: 'Your kitchen may sit exactly where Vastu asks. Your toilets too. The place can still carry imbalances that affect health, money, sleep and relationships. And you now spend far more hours inside it than any generation before you did.',
 	factors: [
 		{
 			title: 'Concealed drains',
 			subtitle: 'The silent leak',
-			body: "Older homes kept every drain outside the house, and open. Today we live above a hidden network of piped drains — in toilets, kitchens, balconies, backyards. Every drain carries away more than water; it carries energy with it. Traditional Vastu rarely addresses this, because in its time the problem did not exist."
+			body: 'Old homes kept their drains outside, and open. Yours run hidden through the walls and floors. Toilets, kitchen, balconies, backyard. Every drain carries water away. It carries energy away with it. The classical texts say nothing about this, because piped drainage did not exist when they were written.'
 		},
 		{
 			title: 'EMF radiation',
 			subtitle: 'From everyday devices',
-			body: 'Wi-Fi routers, LED televisions, phones, laptops and microwave ovens all generate electromagnetic fields. These affect both the energy of a place and the health of the people in it. The classical texts are silent on this for the obvious reason — and yet it is now present in every room of every home.'
+			body: 'Your router runs all day. So does the television, the microwave, the laptop, the phone in your pocket. Each one generates an electromagnetic field. Those fields affect the energy of a place and the people living in it. No ancient text accounts for this. Every modern home needs it accounted for.'
 		}
 	],
 	closing:
-		'These are two factors among several. The conclusion is the same either way: a place needs to be compliant with both Vastu principles and energy principles. Only then do you get the full benefit.'
+		'These are two factors. There are others. The conclusion holds either way. A place has to satisfy Vastu principles and energy principles together. Half the work gives you half the benefit.'
 };
 
 // ---------------------------------------------------------------------------
@@ -76,23 +89,23 @@ export const problem = {
 
 export const method = {
 	eyebrow: 'The approach',
-	heading: 'Assess first. Correct second. Never demolish.',
-	body: 'I use scientific methods to identify the energy imbalances in a place — both physical and non-physical — and then correct them without touching the structure.',
+	heading: 'Measured first. Corrected second. Never demolished.',
+	body: 'I do not guess at what is wrong with a place. I take readings, and I work from what they show me.',
 	steps: [
 		{
 			number: '01',
-			title: 'Scientific assessment',
-			body: 'I measure your place for energy imbalances of both kinds: physical ones you could point to, and non-physical ones you could not. Nothing is guessed at.'
+			title: 'I measure with a Lecher antenna',
+			body: 'A Lecher antenna is a calibrated instrument for taking energy readings at specific points in a space. I use it to map what is out of balance in yours. Some imbalances are physical. Some are not. Both get recorded.'
 		},
 		{
 			number: '02',
-			title: 'A plain explanation, and the exact cost',
-			body: 'I walk you through what is imbalanced and why it is happening. Then I give you the precise cost of correcting it, before you commit to anything.'
+			title: 'I explain, then I quote',
+			body: 'I walk you through every imbalance I found and why it is there. Then you get the exact cost to correct it. You decide after that, not before.'
 		},
 		{
 			number: '03',
-			title: 'Correction without renovation',
-			body: 'No broken walls, no remodelling, no structural change. Because nothing is demolished, the cost is a fraction of traditional Vastu correction.'
+			title: 'I correct without touching the structure',
+			body: 'No wall comes down. Nothing gets remodelled. Because there is no construction involved, it costs a fraction of conventional Vastu correction.'
 		}
 	]
 };
@@ -103,25 +116,26 @@ export const method = {
 
 export const audiences = {
 	eyebrow: 'Who I work with',
-	heading: 'Homes, businesses, and everything in between.',
+	heading: 'Homes, businesses, and the land they sit on.',
 	items: [
 		{
 			title: 'Homes in India',
-			body: 'Apartments, independent houses and land. Most people come to me about health, relationships, or a sense that things are not moving — and want it addressed without tearing up the house.'
+			body: 'Apartments, independent houses and plots. Most people call me about health, relationships, or a feeling that nothing is moving. They want it addressed without tearing up the house.'
 		},
 		{
 			title: 'Homes overseas',
-			body: 'I have developed a process for assessing and correcting a place without visiting it in person. Clients in the USA and elsewhere have had their homes corrected remotely, working from the details they provide.'
+			body: 'I assess and correct places I have never stood in. Clients in the USA and elsewhere have had their homes corrected remotely, from details they sent me. Distance is not an obstacle.'
 		},
 		{
 			title: 'Businesses and factories',
-			body: 'Offices, shops, commercial spaces, factories and land. The same assessment, applied where stagnation and growth are measured in revenue rather than wellbeing.'
+			body: 'Offices, shops, commercial spaces, factories and land. The same assessment, applied where stagnation shows up in revenue rather than wellbeing.'
 		}
 	]
 };
 
 // ---------------------------------------------------------------------------
 // Testimonials — quotes are reproduced as given, with permission.
+// Client wording is left untouched, including its long sentences.
 // ---------------------------------------------------------------------------
 
 export const testimonials = {
@@ -147,14 +161,14 @@ export const testimonials = {
 			title: 'Technologist, Trainer & Educationalist',
 			image: 'asha-varma.jpg',
 			quote:
-				'Mr. Koundinya has done energy and scientific Vastu corrections to my home and my relatives’ homes. I have seen positive results in my house — my son started to study better, and the overall energy of my house became highly positive. The best part of his approach is that there is no need for any alterations in the house, which makes these corrections cost effective.'
+				'Mr. Koundinya has done energy and scientific Vastu corrections to my home and my relatives’ homes. I have seen positive results in my house. My son started to study better, and the overall energy of my house became highly positive. The best part of his approach is that there is no need for any alterations in the house, which makes these corrections cost effective.'
 		},
 		{
 			name: 'Arunachalam Karthikeyan',
 			title: 'Founder & Board Director, Alliance of Indian MSMEs',
 			image: 'arunachalam-karthikeyan.jpg',
 			quote:
-				'I am a firm believer of modern science and interested to know how the energies affect lives of the people at homes and work places. We found positive and progressive results after his intervention, which motivated me and my family to consult him and recommend him to our family and friends — without making any changes in the building. I found Koundinya Ji as a highly knowledgeable person with down to earth attitude and strong value systems.'
+				'I am a firm believer of modern science and interested to know how the energies affect lives of the people at homes and work places. We found positive and progressive results after his intervention, which motivated me and my family to consult him and recommend him to our family and friends, without making any changes in the building. I found Koundinya Ji as a highly knowledgeable person with down to earth attitude and strong value systems.'
 		},
 		{
 			name: 'Muralidhar Koteshwar',
@@ -167,6 +181,37 @@ export const testimonials = {
 };
 
 // ---------------------------------------------------------------------------
+// Questions — also emitted as FAQPage structured data for search results.
+// ---------------------------------------------------------------------------
+
+export const faq = {
+	eyebrow: 'Before you ask',
+	heading: 'The questions I get most.',
+	items: [
+		{
+			q: 'My home is already Vastu compliant. Is there anything left to do?',
+			a: 'Usually, yes. Vastu compliance covers layout and direction. It does not cover concealed drainage or electromagnetic fields. Neither existed when the texts were written, so neither is addressed in them.'
+		},
+		{
+			q: 'Do you have to visit my home?',
+			a: 'Not necessarily. I have corrected homes in the USA and elsewhere without travelling to them, working from details the owner sends me. On-site visits are available too. Both routes work.'
+		},
+		{
+			q: 'Will anything be broken or rebuilt?',
+			a: 'No. Not a wall, not a floor, not a fitting. Every correction is non-structural. That is the whole basis of how I work.'
+		},
+		{
+			q: 'What does it cost?',
+			a: 'You get the exact figure after the assessment and before any correction starts. Because no construction is involved, it costs far less than traditional Vastu remodelling.'
+		},
+		{
+			q: 'Do you work with businesses as well as homes?',
+			a: 'Yes. Offices, shops, factories, commercial buildings and land, alongside residences.'
+		}
+	]
+};
+
+// ---------------------------------------------------------------------------
 // About
 // ---------------------------------------------------------------------------
 
@@ -174,11 +219,11 @@ export const about = {
 	eyebrow: 'About',
 	heading: 'Koundinya Nemana',
 	paragraphs: [
-		'Since 2018 I have corrected the Vastu and the energies of residences, businesses, factories, commercial spaces and land — in India and abroad.',
-		'My work sits at the meeting point of two things: the spatial principles of traditional Vastu, and the energetic realities of how we actually live now — concealed plumbing, constant connectivity, and homes that are also workplaces. Attending to one without the other leaves the job half done.',
-		'Clients have shared feedback about improvements in their overall wellbeing, relationships and professional growth, and in some cases resolution of long-pending personal matters. What I can promise you directly is narrower and more concrete: an honest assessment, a clear explanation of what I find, and the exact cost before you decide anything.'
+		'Since 2018 I have corrected the Vastu and the energies of more than 330 places. Residences, businesses, factories, commercial spaces and land, in India and abroad.',
+		'My work sits where two things meet. One is the spatial logic of traditional Vastu. The other is how we actually live now, with concealed plumbing, constant connectivity, and homes that double as workplaces. Attend to one and ignore the other, and the job is half done.',
+		'Clients have told me about improvements in wellbeing, in relationships, in professional growth. Some have resolved matters that stayed stuck for years. What I promise you directly is narrower than that, and more concrete. An honest assessment. A clear explanation of what I find. The exact cost, before you decide anything.'
 	],
-	cta: "Let's discuss your space"
+	cta: 'Let’s discuss your space'
 };
 
 // ---------------------------------------------------------------------------
@@ -186,8 +231,8 @@ export const about = {
 // ---------------------------------------------------------------------------
 
 export const closing = {
-	heading: 'Ready to find the leaks?',
-	body: 'Book an initial assessment. I will identify the imbalances in your place, explain why they are there, and give you a clear, renovation-free path to correcting them — with the cost known upfront.',
+	heading: 'Find out what your place is losing.',
+	body: 'Book an assessment. I will measure your space, show you what is out of balance, and explain why. Then I will tell you what correcting it costs, before you commit to anything.',
 	cta: 'Book an assessment',
 	reassurance: 'No demolition · No renovation · Cost confirmed before you commit'
 };
@@ -196,5 +241,6 @@ export const nav = [
 	{ label: 'The problem', href: '#problem' },
 	{ label: 'The approach', href: '#approach' },
 	{ label: 'Clients', href: '#clients' },
+	{ label: 'Questions', href: '#questions' },
 	{ label: 'About', href: '#about' }
 ];

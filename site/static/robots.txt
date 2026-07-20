@@ -1,3 +1,5 @@
 # allow crawling everything by default
 User-agent: *
 Disallow:
+
+Sitemap: https://socraticsurge.github.io/energy-corrections/sitemap.xml
